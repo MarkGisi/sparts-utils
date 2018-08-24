@@ -11,6 +11,9 @@ fi
 sudo docker stop $container
 sudo docker rm $container 
 
+## Use the following command to get the latest version of the ledger node
+sudo docker pull sameerfarooq/sparts-test:latest 
+
 sudo docker run -dit --name=$container -p 0.0.0.0:818:818 -p 0.0.0.0:4004:4004 -p 127.0.0.1:8080:8080 -p 127.0.0.1:8800:8800 sameerfarooq/sparts-test:latest /project/sparts_ledger.sh
 
 sleep 30s
